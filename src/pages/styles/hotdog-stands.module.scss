@@ -1,0 +1,35 @@
+.pageWrapper {
+  display: flex;
+  height: calc(100vh - 64px);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.hotdogStand {
+  width: 50%;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 50vh;
+  }
+}
+
+.mapWrapper {
+  width: 50%;
+  height: 100%;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 50vh;
+  }
+}
+
+.mapboxglMap {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,36 @@
+@import "../../pages/styles/variables.module.scss";
+
+$navbar-height: 60px;
+$navbar-background: $primary-color;
+$navbar-text-color: #999;
+$navbar-text-hover-color: #ccc;
+$navbar-logo-font-size: 24px;
+$navbar-link-font-size: 18px;
+$navbar-link-padding: 0 15px;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $navbar-height;
+  background-color: $navbar-background;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__logo {
+    font-size: $navbar-logo-font-size;
+    color: $navbar-text-color;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: $navbar-link-font-size;
+    color: $navbar-text-color;
+    padding: $navbar-link-padding;
+    text-decoration: none;
+
+    &:hover {
+      color: $navbar-text-hover-color;
+    }
+  }
+}

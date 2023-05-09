@@ -1,0 +1,187 @@
+[
+  {
+    "id": 0,
+    "stand_name": "Hot Dog Haven",
+    "description": "Good hotdogs",
+    "image": "",
+    "alt": "",
+    "coordinates": {
+      "lat": 59.13308943796942,
+      "alt": 10.217113152648519
+    },
+    "reviews": [
+      {
+        "id": 0,
+        "name": "Alice Johnson",
+        "comment": "These hotdogs were delicious! I loved the toppings.",
+        "rating": 4
+      },
+      {
+        "id": 1,
+        "name": "Bob Brown",
+        "comment": "The hotdogs were just okay. I've had better elsewhere.",
+        "rating": 3
+      },
+      {
+        "id": 2,
+        "name": "Charlie Davis",
+        "comment": "These hotdogs were fantastic! I couldn't get enough of them.",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Debbie Edwards",
+        "comment": "The hotdogs were pretty good, but nothing exceptional.",
+        "rating": 3
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "stand_name": "Frankly Speaking",
+    "description": "Gourmet hotdogs",
+    "image": "",
+    "alt": "",
+    "coordinates": {
+      "lat": 4,
+      "alt": 5
+    },
+    "reviews": [
+      {
+        "id": 0,
+        "name": "Eleanor Adams",
+        "comment": "These hotdogs were amazing! The flavor combinations were perfect.",
+        "rating": 5
+      },
+      {
+        "id": 1,
+        "name": "Franklin Evans",
+        "comment": "I was disappointed with these hotdogs. They were overpriced and not that great.",
+        "rating": 2
+      },
+      {
+        "id": 2,
+        "name": "Grace Chen",
+        "comment": "These hotdogs were the best I've ever had! I can't wait to come back.",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Henry Lee",
+        "comment": "These hotdogs were good, but not worth the high price.",
+        "rating": 3
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "stand_name": "Hot Dog Heaven",
+    "description": "Gourmet hotdogs",
+    "image": "",
+    "alt": "",
+    "coordinates": {
+      "lat": 59.131212392238616,
+      "alt": 10.220460549598727
+    },
+    "reviews": [
+      {
+        "id": 0,
+        "name": "Mark Johnson",
+        "comment": "The hotdogs were amazing! The flavors were so unique and tasty.",
+        "rating": 5
+      },
+      {
+        "id": 1,
+        "name": "Linda Brown",
+        "comment": "These hotdogs were just okay. I've had better.",
+        "rating": 3
+      },
+      {
+        "id": 2,
+        "name": "David Smith",
+        "comment": "These hotdogs were fantastic! I loved the homemade toppings.",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Samantha Davis",
+        "comment": "The hotdogs were pretty good, but nothing exceptional.",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "stand_name": "Frank's Franks",
+    "description": "Classic hotdogs",
+    "image": "",
+    "alt": "",
+    "coordinates": {
+      "lat": 59.12982518380625,
+      "alt": 10.246510163813427
+    },
+    "reviews": [
+      {
+        "id": 0,
+        "name": "Maggie Chen",
+        "comment": "These hotdogs were so tasty! The chili and cheese toppings were perfect.",
+        "rating": 5
+      },
+      {
+        "id": 1,
+        "name": "Michael Jackson",
+        "comment": "I was disappointed with these hotdogs. They were cold and flavorless.",
+        "rating": 2
+      },
+      {
+        "id": 2,
+        "name": "Nina Patel",
+        "comment": "These hotdogs were amazing! The bun was soft and the sausage was juicy.",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Oliver Lee",
+        "comment": "The hotdogs were okay, but nothing special.",
+        "rating": 3
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "stand_name": "Haute Dogs",
+    "description": "Gourmet hotdogs",
+    "image": "",
+    "alt": "",
+    "coordinates": {
+      "lat": 59.12837185755986,
+      "alt": 10.22329296229977
+    },
+    "reviews": [
+      {
+        "id": 0,
+        "name": "Peter Davis",
+        "comment": "These hotdogs were fantastic! The truffle aioli was a game changer.",
+        "rating": 5
+      },
+      {
+        "id": 1,
+        "name": "Quincy Jones",
+        "comment": "I was not impressed with these hotdogs. They were overpriced and overhyped.",
+        "rating": 2
+      },
+      {
+        "id": 2,
+        "name": "Rachel Kim",
+        "comment": "These hotdogs were the best I've ever had! The toppings were so fresh and flavorful.",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Samantha Patel",
+        "comment": "The hotdogs were pretty good, but I wish there were more vegetarian options.",
+        "rating": 4
+      }
+    ]
+  }
+]
