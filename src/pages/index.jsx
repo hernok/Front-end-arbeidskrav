@@ -12,11 +12,9 @@ export default function Home({ stand }) {
 }
 
 export async function getStaticProps() {
-  // Read the JSON file
   const filePath = path.join(process.cwd(), "public", "data.json");
   const standData = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
-  // Pass the data to the page component as props
   return {
     props: {
       stand: standData,

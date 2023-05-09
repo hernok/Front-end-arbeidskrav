@@ -1,0 +1,67 @@
+@import "/src/pages/styles/variables.module.scss";
+
+.standCard {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.standImage {
+  width: 30%;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.standInfo {
+  width: 70%;
+}
+
+.standName {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.standDescription {
+  margin-bottom: 10px;
+}
+
+.standRating {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.reviewsButton {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reviewsButton:hover {
+  background-color: #0056b3;
+}
+
+.reviewsDropdown {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.review {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.review:last-child {
+  margin-bottom: 0;
+}

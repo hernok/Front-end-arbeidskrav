@@ -3,8 +3,8 @@
     "id": 0,
     "stand_name": "Hot Dog Haven",
     "description": "Good hotdogs",
-    "image": "",
-    "alt": "",
+    "image": "hotdog-stand-1.png",
+    "alt": "image of hotdog-stand-1",
     "coordinates": {
       "lat": 59.13308943796942,
       "alt": 10.217113152648519
@@ -40,8 +40,8 @@
     "id": 1,
     "stand_name": "Frankly Speaking",
     "description": "Gourmet hotdogs",
-    "image": "",
-    "alt": "",
+    "image": "hotdog-stand-2.png",
+    "alt": "image of hotdog-stand-2",
     "coordinates": {
       "lat": 4,
       "alt": 5
@@ -77,8 +77,8 @@
     "id": 2,
     "stand_name": "Hot Dog Heaven",
     "description": "Gourmet hotdogs",
-    "image": "",
-    "alt": "",
+    "image": "hotdog-stand-3.png",
+    "alt": "image of hotdog-stand-3",
     "coordinates": {
       "lat": 59.131212392238616,
       "alt": 10.220460549598727
@@ -114,8 +114,8 @@
     "id": 3,
     "stand_name": "Frank's Franks",
     "description": "Classic hotdogs",
-    "image": "",
-    "alt": "",
+    "image": "hotdog-stand-4.png",
+    "alt": "image of hotdog-stand-4",
     "coordinates": {
       "lat": 59.12982518380625,
       "alt": 10.246510163813427
@@ -151,8 +151,8 @@
     "id": 4,
     "stand_name": "Haute Dogs",
     "description": "Gourmet hotdogs",
-    "image": "",
-    "alt": "",
+    "image": "hotdog-stand-5.png",
+    "alt": "image of hotdog-stand-5",
     "coordinates": {
       "lat": 59.12837185755986,
       "alt": 10.22329296229977

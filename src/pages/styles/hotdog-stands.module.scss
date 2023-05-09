@@ -1,4 +1,8 @@
+@import "/src/pages/styles/variables.module.scss";
+
 .pageWrapper {
+  color: $primary-text-color;
+  background-color: $primary-color;
   display: flex;
   height: calc(100vh - 64px);
 
