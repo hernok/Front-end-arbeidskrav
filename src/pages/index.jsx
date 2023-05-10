@@ -2,10 +2,12 @@ import styles from "./styles/index.module.scss";
 import fs from "fs";
 import path from "path";
 import LoginForm from "../components/login/LoginForm";
+import Navbar from "@/components/navbar/Navbar";
 
 export default function Home({ stand }) {
   return (
-    <div>
+    <div className={styles.mainWrapper}>
+      <Navbar />
       <LoginForm />
     </div>
   );

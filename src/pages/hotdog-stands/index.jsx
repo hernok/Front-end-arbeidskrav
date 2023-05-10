@@ -14,9 +14,6 @@ const HotdogStand = ({ stands }) => {
           {stands.map((stand) => {
             return <HotdogStandCard stand={stand} />;
           })}
-          {stands.map((stand) => {
-            return <HotdogStandCard stand={stand} />;
-          })}
         </div>
         <div className={styles.mapWrapper}>
           <Map stands={stands} />

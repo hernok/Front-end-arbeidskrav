@@ -1,67 +1,71 @@
 @import "/src/pages/styles/variables.module.scss";
 
 .standCard {
+  width: 70%;
   display: flex;
-  width: 100%;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  flex-direction: row;
+  margin-bottom: 30px;
+  border: 2px solid $secondary-light;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: $secondary-dark;
 }
 
 .standImage {
-  width: 30%;
-  height: 200px;
+  width: 70%;
+  height: 170px;
   object-fit: cover;
-  margin-right: 20px;
-  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.standLink {
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  :hover {
+    color: $secondary-light;
+  }
 }
 
 .standInfo {
-  width: 70%;
+  flex-grow: 1;
+  text-align: center;
+  color: $primary-light;
 }
 
-.standName {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.standDescription {
-  margin-bottom: 10px;
-}
-
-.standRating {
-  margin-bottom: 20px;
-  font-weight: bold;
+.reviewContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .reviewsButton {
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
+  padding: 0.5rem 1rem;
+  background-color: $primary-purple;
+  color: $primary-light;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.reviewsButton:hover {
-  background-color: #0056b3;
+  transition: background-color 0.3s;
 }
 
 .reviewsDropdown {
-  margin-top: 20px;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
-}
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid $secondary-light;
 
-.review {
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.review:last-child {
-  margin-bottom: 0;
+  .review {
+    border-bottom: 1px solid $secondary-light;
+    padding: 10px;
+  }
 }

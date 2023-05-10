@@ -12,18 +12,13 @@ const Navbar = () => {
       </div>
       <ul className={styles.navbar__links}>
         <li className={styles.navbar__item}>
-          <Link href="/about">
-            <span className={styles.navbar__link}>About</span>
+          <Link href="/">
+            <span className={styles.navbar__link}>Login</span>
           </Link>
         </li>
         <li className={styles.navbar__item}>
-          <Link href="/services">
-            <span className={styles.navbar__link}>Services</span>
-          </Link>
-        </li>
-        <li className={styles.navbar__item}>
-          <Link href="/contact">
-            <span className={styles.navbar__link}>Contact</span>
+          <Link href="/hotdog-stands">
+            <span className={styles.navbar__link}>Hotdog stands</span>
           </Link>
         </li>
       </ul>
