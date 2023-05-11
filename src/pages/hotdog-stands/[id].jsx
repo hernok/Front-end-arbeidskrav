@@ -1,11 +1,48 @@
 import fs from "fs";
 import path from "path";
+import styles from "../styles/hotdog-stand.module.scss";
 import ReviewForm from "@/components/review/ReviewForm";
+import Image from "next/image";
+import Navbar from "@/components/navbar/Navbar";
 
 const HotdogStand = ({ stand }) => {
+  const averageRating = calculateAverageRating(stand.reviews);
+
+  function calculateAverageRating(reviews) {
+    let total = 0;
+    for (let i = 0; i < reviews.length; i++) {
+      total += reviews[i].rating;
+    }
+    return (total / reviews.length).toFixed(1);
+  }
+
   return (
     <>
-      <ReviewForm id={stand.id} reviews={stand.reviews} />
+      <Navbar />
+      <div className={styles.pageWrapper}>
+        <div className={styles.hotdogStand}>
+          <Image
+            className={styles.standImage}
+            src={`/assets/images/${stand.image}`}
+            alt={stand.alt}
+            width={900}
+            height={500}
+          ></Image>
+          <div className={styles.reviewForm}></div>
+
+          <ReviewForm id={stand.id} reviews={stand.reviews} />
+        </div>
+        <div className={styles.reviews}>
+          <p>Average Rating: {averageRating}</p>
+          {stand.reviews.map((review) => (
+            <div key={review.id} className={styles.review}>
+              <h3>{review.name}</h3>
+              <p>{review.comment}</p>
+              <p>Rating: {review.rating}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 };

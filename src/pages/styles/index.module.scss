@@ -1,0 +1,7 @@
+@import "/src/pages/styles/variables.module.scss";
+
+.mainWrapper {
+  gap: 20px;
+  height: calc(100vh);
+  background-color: $primary-dark;
+}
