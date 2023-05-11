@@ -2,8 +2,7 @@
 
 .mapboxglContainer {
   width: 100%;
-  height: calc(100% - 64px);
-  position: relative;
+  height: calc(100% - 80px);
 
   @media (max-width: 768px) {
     width: 100%;
@@ -20,4 +19,17 @@
 }
 .mapboxg1-popup {
   background-color: $primary-dark;
+}
+
+.popupLink {
+  text-decoration: none;
+  color: $primary-purple;
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.popupLi {
+  list-style: none;
+  margin: 0;
 }

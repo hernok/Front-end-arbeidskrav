@@ -24,6 +24,7 @@ const HotdogStand = ({ stand }) => {
           <Image
             className={styles.standImage}
             src={`/assets/images/${stand.image}`}
+            alt={stand.alt}
             width={900}
             height={500}
           ></Image>

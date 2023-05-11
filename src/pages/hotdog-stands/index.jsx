@@ -12,7 +12,7 @@ const HotdogStand = ({ stands }) => {
       <div className={styles.pageWrapper}>
         <div className={styles.hotdogStand}>
           {stands.map((stand) => {
-            return <HotdogStandCard stand={stand} />;
+            return <HotdogStandCard key={stand.id} stand={stand} />;
           })}
         </div>
         <div className={styles.mapWrapper}>

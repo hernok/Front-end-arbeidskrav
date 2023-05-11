@@ -7,7 +7,7 @@
     "alt": "image of hotdog-stand-1",
     "coordinates": {
       "lat": 59.13308943796942,
-      "alt": 10.217113152648519
+      "lon": 10.217113152648519
     },
     "reviews": [
       {
@@ -44,7 +44,7 @@
     "alt": "image of hotdog-stand-2",
     "coordinates": {
       "lat": 4,
-      "alt": 5
+      "lon": 5
     },
     "reviews": [
       {
@@ -81,7 +81,7 @@
     "alt": "image of hotdog-stand-3",
     "coordinates": {
       "lat": 59.131212392238616,
-      "alt": 10.220460549598727
+      "lon": 10.220460549598727
     },
     "reviews": [
       {
@@ -118,7 +118,7 @@
     "alt": "image of hotdog-stand-4",
     "coordinates": {
       "lat": 59.12982518380625,
-      "alt": 10.246510163813427
+      "lon": 10.246510163813427
     },
     "reviews": [
       {
@@ -155,7 +155,7 @@
     "alt": "image of hotdog-stand-5",
     "coordinates": {
       "lat": 59.12837185755986,
-      "alt": 10.22329296229977
+      "lon": 10.22329296229977
     },
     "reviews": [
       {
