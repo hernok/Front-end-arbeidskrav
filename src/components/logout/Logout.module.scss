@@ -1,0 +1,15 @@
+@import "/src/pages/styles/variables.module.scss";
+
+.logout {
+  &__span {
+    display: inline-block;
+    font-size: 18px;
+    color: $primary-light;
+    padding: 0 15px;
+    text-decoration: none;
+
+    &:hover {
+      color: $secondary-purple;
+    }
+  }
+}

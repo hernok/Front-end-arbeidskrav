@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
+import Logout from "../logout/Logout";
 
 const Navbar = () => {
   return (
@@ -20,6 +21,9 @@ const Navbar = () => {
           <Link href="/hotdog-stands">
             <span className={styles.navbar__link}>Hotdog stands</span>
           </Link>
+        </li>
+        <li className={styles.navbar__item}>
+          <Logout />
         </li>
       </ul>
     </nav>

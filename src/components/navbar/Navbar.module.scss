@@ -1,17 +1,10 @@
 @import "/src/pages/styles/variables.module.scss";
 
-$navbar-height: 60px;
-$navbar-text-color: $primary-light;
-$navbar-text-hover-color: $secondary-purple;
-$navbar-logo-font-size: 24px;
-$navbar-link-font-size: 18px;
-$navbar-link-padding: 0 15px;
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: $navbar-height;
+  height: 60px;
   background-color: $primary-purple;
   padding: 0 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -20,20 +13,24 @@ $navbar-link-padding: 0 15px;
     list-style-type: none;
   }
 
+  &__links {
+    display: flex;
+  }
+
   &__logo {
-    font-size: $navbar-logo-font-size;
-    color: $navbar-text-color;
+    font-size: 24px;
+    color: $primary-light;
   }
 
   &__link {
     display: inline-block;
-    font-size: $navbar-link-font-size;
-    color: $navbar-text-color;
-    padding: $navbar-link-padding;
+    font-size: 18px;
+    color: $primary-light;
+    padding: 0 15px;
     text-decoration: none;
 
     &:hover {
-      color: $navbar-text-hover-color;
+      color: $secondary-purple;
     }
   }
 }
