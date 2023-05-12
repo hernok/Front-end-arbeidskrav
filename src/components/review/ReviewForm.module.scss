@@ -4,9 +4,9 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  width: 300px;
   gap: 1rem;
   padding: 10px;
-  width: 100%;
   max-width: 400px;
   border-radius: 14px;
   background-color: $secondary-dark;
@@ -38,5 +38,8 @@
     &:hover {
       background-color: $secondary-purple;
     }
+  }
+  @media (max-width: 1200px) {
+    width: 100%;
   }
 }

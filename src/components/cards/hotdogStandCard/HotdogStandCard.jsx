@@ -43,12 +43,14 @@ const HotdogStandCard = ({ stand }) => {
           </div>
         </Link>
         <div className={styles.reviewContainer}>
-          <button
-            onClick={() => setShowReviews(!showReviews)}
-            className={styles.reviewsButton}
-          >
-            {showReviews ? "Hide Reviews" : "Show Reviews"}
-          </button>
+          {stand.reviews.length > 0 && (
+            <button
+              onClick={() => setShowReviews(!showReviews)}
+              className={styles.reviewsButton}
+            >
+              {showReviews ? "Hide Reviews" : "Show Reviews"}
+            </button>
+          )}
           {showReviews && (
             <div className={styles.reviewsDropdown}>
               {stand.reviews.map((review) => (

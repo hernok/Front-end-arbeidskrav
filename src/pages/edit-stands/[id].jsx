@@ -137,93 +137,98 @@ const HotdogStand = ({ stand }) => {
   return (
     <div className={styles.pageWrapper}>
       <Navbar />
-      <form onSubmit={handleUpdate} className={styles.form}>
-        <h2>Edit hotdog stand</h2>
-        {averageRating}
+      <div className={styles.content}>
+        <form onSubmit={handleUpdate} className={styles.form}>
+          <h2>Edit hotdog stand</h2>
+          <p>Rating: </p>
+          {averageRating}
 
-        <label>
-          Stand Name:
-          <input
-            type="text"
-            name="stand_name"
-            value={standData.stand_name}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <label>
-          Description:
-          <input
-            type="text"
-            name="description"
-            value={standData.description}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <label>
-          Image:
-          <select
-            name="image"
-            value={standData.image}
-            onChange={handleInputChange}
-            required
-          >
-            {images.map((image, index) => (
-              <option key={index} value={image}>
-                {image}
-              </option>
-            ))}
-          </select>
-        </label>
-        {stand.image && (
-          <div className={styles.imagePreview}>
-            <Image
-              src={`/assets/images/${stand.image}`}
-              alt={stand.alt}
-              width={200}
-              height={200}
+          <label>
+            Stand Name:
+            <input
+              type="text"
+              name="stand_name"
+              value={standData.stand_name}
+              onChange={handleInputChange}
+              required
             />
-          </div>
-        )}
-        <label>
-          Upload image:
-          <input type="file" onChange={handleFileChange} />
-        </label>
-        <button onClick={handleUpload}>Upload Image</button>
-        <label>
-          Alt:
-          <input
-            type="text"
-            name="alt"
-            value={standData.alt}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <label>
-          Latitude:
-          <input
-            type="number"
-            name="lat"
-            value={standData.coordinates.lat}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <label>
-          Longitude:
-          <input
-            type="number"
-            name="lon"
-            value={standData.coordinates.lon}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <button type="submit">Update</button>
-      </form>
-      <button onClick={handleDelete}>Delete</button>
+          </label>
+          <label>
+            Description:
+            <input
+              type="text"
+              name="description"
+              value={standData.description}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+          <label>
+            Image:
+            <select
+              name="image"
+              value={standData.image}
+              onChange={handleInputChange}
+              required
+            >
+              {images.map((image, index) => (
+                <option key={index} value={image}>
+                  {image}
+                </option>
+              ))}
+            </select>
+          </label>
+          {stand.image && (
+            <div className={styles.imagePreview}>
+              <Image
+                src={`/assets/images/${stand.image}`}
+                alt={stand.alt}
+                width={200}
+                height={200}
+              />
+            </div>
+          )}
+          <label>
+            Upload image:
+            <input type="file" onChange={handleFileChange} />
+          </label>
+          <button onClick={handleUpload}>Upload Image</button>
+          <label>
+            Alt:
+            <input
+              type="text"
+              name="alt"
+              value={standData.alt}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+          <label>
+            Latitude:
+            <input
+              type="number"
+              name="lat"
+              value={standData.coordinates.lat}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+          <label>
+            Longitude:
+            <input
+              type="number"
+              name="lon"
+              value={standData.coordinates.lon}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+          <button type="submit">Update</button>
+        </form>
+        <button onClick={handleDelete} className={styles.deleteButton}>
+          Delete
+        </button>
+      </div>
     </div>
   );
 };

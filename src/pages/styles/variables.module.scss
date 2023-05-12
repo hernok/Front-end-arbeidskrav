@@ -4,6 +4,8 @@ $primary-purple: #58259f;
 $secondary-purple: #8558c4;
 $primary-light: #fff;
 $secondary-light: #ccc;
+$primary-red: #8c1f1f;
+$secondary-red: #e73c3c;
 
 :export {
   primary-dark: $primary-dark;
@@ -12,4 +14,6 @@ $secondary-light: #ccc;
   secondary-purple: $secondary-purple;
   primary-light: $primary-light;
   secondary-light: $secondary-light;
+  primary-red: $primary-red;
+  secondary-red: $secondary-red;
 }

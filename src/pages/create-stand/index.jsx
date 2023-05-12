@@ -121,8 +121,8 @@ const CreateStand = () => {
   return (
     <div className={styles.pageWrapper}>
       <Navbar />
-      <h2>Create hotdog stans</h2>
       <form onSubmit={handleSubmit} className={styles.form}>
+        <h2>Create hotdog stand</h2>
         <label>
           Stand Name:
           <input
