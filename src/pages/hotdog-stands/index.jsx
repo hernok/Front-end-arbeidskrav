@@ -12,7 +12,9 @@ const HotdogStand = ({ stands }) => {
       <div className={styles.pageWrapper}>
         <div className={styles.hotdogStand}>
           {stands.map((stand) => {
-            return <HotdogStandCard key={stand.id} stand={stand} />;
+            if (stand.stand_name !== "" && stand.description !== "") {
+              return <HotdogStandCard key={stand.id} stand={stand} />;
+            }
           })}
         </div>
         <div className={styles.mapWrapper}>
@@ -31,6 +33,7 @@ export async function getStaticProps() {
     props: {
       stands: standsData,
     },
+    revalidate: 1,
   };
 }
 

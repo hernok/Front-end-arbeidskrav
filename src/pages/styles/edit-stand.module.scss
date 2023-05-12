@@ -1,0 +1,112 @@
+@import "/src/pages/styles/variables.module.scss";
+.pageWrapper {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $primary-dark;
+  @media (max-width: 768px) {
+    height: 100%;
+  }
+}
+.form {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 600px;
+
+  background-color: $secondary-dark;
+
+  border-radius: 10px;
+  color: $primary-light;
+  margin-top: 30px;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid $secondary-dark;
+    color: $primary-dark;
+    margin-top: 5px;
+  }
+
+  button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: $primary-light;
+    background-color: $primary-purple;
+    cursor: pointer;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: $secondary-purple;
+    }
+  }
+
+  .imagePreview {
+    margin: 10px 0;
+
+    img {
+      border-radius: 5px;
+    }
+  }
+
+  padding: 10px;
+  border-radius: 0;
+
+  @media (max-width: 768px) {
+    .form {
+      width: 95%;
+      max-width: none;
+    }
+    input[type="text"],
+    input[type="number"],
+    select {
+      font-size: 14px;
+    }
+
+    button {
+      font-size: 14px;
+    }
+
+    .imagePreview {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.deleteButton {
+  align-self: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: $primary-light;
+  background-color: $primary-red;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary-red;
+    color: $secondary-light;
+  }
+}

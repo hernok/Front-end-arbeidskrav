@@ -8,6 +8,9 @@ const HotdogStandCard = ({ stand }) => {
   const averageRating = calculateAverageRating(stand.reviews);
 
   function calculateAverageRating(reviews) {
+    if (reviews.length === 0) {
+      return "No ratings";
+    }
     let total = 0;
     for (let i = 0; i < reviews.length; i++) {
       total += reviews[i].rating;
@@ -40,12 +43,14 @@ const HotdogStandCard = ({ stand }) => {
           </div>
         </Link>
         <div className={styles.reviewContainer}>
-          <button
-            onClick={() => setShowReviews(!showReviews)}
-            className={styles.reviewsButton}
-          >
-            {showReviews ? "Hide Reviews" : "Show Reviews"}
-          </button>
+          {stand.reviews.length > 0 && (
+            <button
+              onClick={() => setShowReviews(!showReviews)}
+              className={styles.reviewsButton}
+            >
+              {showReviews ? "Hide Reviews" : "Show Reviews"}
+            </button>
+          )}
           {showReviews && (
             <div className={styles.reviewsDropdown}>
               {stand.reviews.map((review) => (
