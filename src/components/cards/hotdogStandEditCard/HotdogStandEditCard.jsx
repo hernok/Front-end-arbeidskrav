@@ -7,14 +7,14 @@ const HotdogStandEditCard = ({ stand }) => {
   const averageRating = calculateAverageRating(stand.reviews);
 
   function calculateAverageRating(reviews) {
-    if (reviews.length === 0) {
+    if (reviews?.length === 0) {
       return "No ratings";
     }
     let total = 0;
-    for (let i = 0; i < reviews.length; i++) {
-      total += reviews[i].rating;
+    for (let i = 0; i < reviews?.length; i++) {
+      total += reviews[i]?.rating;
     }
-    return (total / reviews.length).toFixed(1);
+    return (total / reviews?.length).toFixed(1);
   }
 
   return (

@@ -8,8 +8,6 @@ export default function handler(req, res) {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
-
-    // Filter out any non-image files (this assumes images have .jpg, .png, .gif or .svg extension)
     const imageFiles = files.filter((file) =>
       [".jpg", ".png", ".gif", ".svg"].includes(path.extname(file))
     );
