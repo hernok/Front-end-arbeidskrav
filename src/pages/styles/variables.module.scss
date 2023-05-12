@@ -1,7 +1,19 @@
-$primary-color: #333;
-$secondary-color: #555;
+$primary-dark: #161616;
+$secondary-dark: #2c2c2c;
+$primary-purple: #58259f;
+$secondary-purple: #8558c4;
+$primary-light: #fff;
+$secondary-light: #ccc;
+$primary-red: #8c1f1f;
+$secondary-red: #e73c3c;
 
 :export {
-  primaryColor: $primary-color;
-  primaryColor: $secondary-color;
+  primary-dark: $primary-dark;
+  secondary-dark: $secondary-dark;
+  primary-purple: $primary-purple;
+  secondary-purple: $secondary-purple;
+  primary-light: $primary-light;
+  secondary-light: $secondary-light;
+  primary-red: $primary-red;
+  secondary-red: $secondary-red;
 }

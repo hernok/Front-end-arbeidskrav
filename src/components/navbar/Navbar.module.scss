@@ -1,36 +1,45 @@
-@import "../../pages/styles/variables.module.scss";
-
-$navbar-height: 60px;
-$navbar-background: $primary-color;
-$navbar-text-color: #999;
-$navbar-text-hover-color: #ccc;
-$navbar-logo-font-size: 24px;
-$navbar-link-font-size: 18px;
-$navbar-link-padding: 0 15px;
+@import "/src/pages/styles/variables.module.scss";
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: $navbar-height;
-  background-color: $navbar-background;
-  padding: 0 20px;
+  height: 60px;
+  background-color: $primary-purple;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-  &__logo {
-    font-size: $navbar-logo-font-size;
-    color: $navbar-text-color;
+  li {
+    list-style-type: none;
   }
 
-  &__link {
+  .navbar-links {
+    display: flex;
+  }
+
+  .navbar-logo {
+    font-size: 24px;
+    color: $primary-light;
+  }
+
+  .navbar-link,
+  .menu-item {
     display: inline-block;
-    font-size: $navbar-link-font-size;
-    color: $navbar-text-color;
-    padding: $navbar-link-padding;
+    font-size: 18px;
+    color: $primary-light;
+    padding: 0 15px;
     text-decoration: none;
 
     &:hover {
-      color: $navbar-text-hover-color;
+      color: $secondary-purple;
+    }
+  }
+
+  .burger-icon {
+    color: $primary-light;
+    font-size: 60px;
+    text-align: center;
+    :hover {
+      cursor: pointer;
     }
   }
 }
