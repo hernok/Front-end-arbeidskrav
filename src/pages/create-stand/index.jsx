@@ -21,8 +21,14 @@ const CreateStand = () => {
     const fetchImages = async () => {
       const res = await fetch("/api/images");
       const data = await res.json();
-
       setImages(data.images);
+
+      if (!stand.image && data.images.length > 0) {
+        setStand({
+          ...stand,
+          image: data.images[0],
+        });
+      }
     };
 
     fetchImages();
