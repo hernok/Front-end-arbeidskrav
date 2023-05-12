@@ -1,13 +1,13 @@
 import fs from "fs";
 import path from "path";
 
-export default function handler(req, res) {
+const handler = (req, res) => {
   if (req.method === "PUT") {
     const { id } = req.body;
     const filePath = path.join(process.cwd(), "public", "data.json");
     const fileData = fs.readFileSync(filePath);
-    const standIndex = stands.findIndex((stand) => stand.id === id);
     let stands = JSON.parse(fileData);
+    const standIndex = stands.findIndex((stand) => stand.id === id);
     if (standIndex === -1) {
       res.status(404).json({ message: "Stand not found" });
     } else {
@@ -29,4 +29,5 @@ export default function handler(req, res) {
   } else {
     res.status(400).json({ message: "Only PUT requests are allowed" });
   }
-}
+};
+export default handler;

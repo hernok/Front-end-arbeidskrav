@@ -23,11 +23,11 @@ const CreateStand = () => {
       const data = await res.json();
       setImages(data.images);
 
-      if (!stand.image && data.images.length > 0) {
-        setStand({
-          ...stand,
-          image: data.images[0],
-        });
+      if (data.images.length > 0) {
+        setStand((prevStand) => ({
+          ...prevStand,
+          image: prevStand.image || data.images[0],
+        }));
       }
     };
 

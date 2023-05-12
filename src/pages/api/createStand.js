@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-export default async (req, res) => {
+const handleRequest = async (req, res) => {
   if (req.method === "POST") {
     const newStand = req.body;
     const filePath = path.join(process.cwd(), "public", "data.json");
@@ -19,3 +19,5 @@ export default async (req, res) => {
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 };
+
+export default handleRequest;

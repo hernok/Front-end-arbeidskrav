@@ -56,6 +56,7 @@ const ReviewForm = ({ id, reviews }) => {
   if (user) {
     return (
       <form onSubmit={handleSubmit} className={styles.reviewForm}>
+        <h3>Leave a comment!</h3>
         <label htmlFor="Name">Name:</label>
         <input
           id="Name"
