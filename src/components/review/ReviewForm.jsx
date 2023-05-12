@@ -56,7 +56,7 @@ const ReviewForm = ({ id, reviews }) => {
   if (user) {
     return (
       <form onSubmit={handleSubmit} className={styles.reviewForm}>
-        <h3>Leave a comment!</h3>
+        <h3>Leave a review!</h3>
         <label htmlFor="Name">Name:</label>
         <input
           id="Name"
@@ -88,7 +88,7 @@ const ReviewForm = ({ id, reviews }) => {
       </form>
     );
   } else {
-    return <p>Please login to leave a comment</p>;
+    return <p>Please login to leave a review</p>;
   }
 };
 
