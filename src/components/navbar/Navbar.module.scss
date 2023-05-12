@@ -6,23 +6,23 @@
   align-items: center;
   height: 60px;
   background-color: $primary-purple;
-  padding: 0 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   li {
     list-style-type: none;
   }
 
-  &__links {
+  .navbar-links {
     display: flex;
   }
 
-  &__logo {
+  .navbar-logo {
     font-size: 24px;
     color: $primary-light;
   }
 
-  &__link {
+  .navbar-link,
+  .menu-item {
     display: inline-block;
     font-size: 18px;
     color: $primary-light;
@@ -31,6 +31,15 @@
 
     &:hover {
       color: $secondary-purple;
+    }
+  }
+
+  .burger-icon {
+    color: $primary-light;
+    font-size: 60px;
+    text-align: center;
+    :hover {
+      cursor: pointer;
     }
   }
 }

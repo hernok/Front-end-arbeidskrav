@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import styles from "./HotdogStandCard.module.scss";
+import styles from "./HotdogStandEditCard.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
-const HotdogStandCard = ({ stand }) => {
-  const [showReviews, setShowReviews] = useState(false);
+const HotdogStandEditCard = ({ stand }) => {
   const averageRating = calculateAverageRating(stand.reviews);
 
   function calculateAverageRating(reviews) {
@@ -30,7 +29,7 @@ const HotdogStandCard = ({ stand }) => {
       <div className={styles.contentWrapper}>
         <Link
           key={stand.id}
-          href={`/hotdog-stands/${stand.id}`}
+          href={`/edit-stands/${stand.id}`}
           className={styles.standLink}
           passHref
         >
@@ -42,28 +41,9 @@ const HotdogStandCard = ({ stand }) => {
             </p>
           </div>
         </Link>
-        <div className={styles.reviewContainer}>
-          <button
-            onClick={() => setShowReviews(!showReviews)}
-            className={styles.reviewsButton}
-          >
-            {showReviews ? "Hide Reviews" : "Show Reviews"}
-          </button>
-          {showReviews && (
-            <div className={styles.reviewsDropdown}>
-              {stand.reviews.map((review) => (
-                <div key={review.id} className={styles.review}>
-                  <h3>{review.name}</h3>
-                  <p>{review.comment}</p>
-                  <p>Rating: {review.rating}</p>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
       </div>
     </div>
   );
 };
 
-export default HotdogStandCard;
+export default HotdogStandEditCard;

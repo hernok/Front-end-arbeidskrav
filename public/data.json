@@ -43,8 +43,8 @@
     "image": "hotdog-stand-2.png",
     "alt": "image of hotdog-stand-2",
     "coordinates": {
-      "lat": 4,
-      "lon": 5
+      "lat": 59.13408943396942,
+      "lon": 10.212113152548518
     },
     "reviews": [
       {
@@ -183,5 +183,41 @@
         "rating": 4
       }
     ]
+  },
+  {
+    "stand_name": "12",
+    "description": "12",
+    "image": "the-hungry-dog-hot-dog.png",
+    "alt": "12",
+    "coordinates": {
+      "lat": 12,
+      "lon": 12
+    },
+    "id": 5,
+    "reviews": []
+  },
+  {
+    "stand_name": "333",
+    "description": "333",
+    "image": "JERRYTOMTRAINBYEBYE.jpg-1683845136409-325847877.jpg",
+    "alt": "333",
+    "coordinates": {
+      "lat": 22,
+      "lon": 22
+    },
+    "id": 6,
+    "reviews": []
+  },
+  {
+    "stand_name": "12",
+    "description": "12",
+    "image": "JERRYTOMTRAINBYEBYE.jpg-1683845136409-325847877.jpg",
+    "alt": "12",
+    "coordinates": {
+      "lat": 12,
+      "lon": 12
+    },
+    "id": 7,
+    "reviews": []
   }
 ]

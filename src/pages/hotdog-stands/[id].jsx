@@ -9,6 +9,9 @@ const HotdogStand = ({ stand }) => {
   const averageRating = calculateAverageRating(stand.reviews);
 
   function calculateAverageRating(reviews) {
+    if (reviews.length === 0) {
+      return "No ratings";
+    }
     let total = 0;
     for (let i = 0; i < reviews.length; i++) {
       total += reviews[i].rating;
@@ -28,20 +31,24 @@ const HotdogStand = ({ stand }) => {
             width={900}
             height={500}
           ></Image>
-          <div className={styles.reviewForm}></div>
-
-          <ReviewForm id={stand.id} reviews={stand.reviews} />
+          <div className={styles.reviewForm}>
+            <ReviewForm id={stand.id} reviews={stand.reviews} />
+          </div>
         </div>
-        <div className={styles.reviews}>
-          <p>Average Rating: {averageRating}</p>
-          {stand.reviews.map((review) => (
-            <div key={review.id} className={styles.review}>
-              <h3>{review.name}</h3>
-              <p>{review.comment}</p>
-              <p>Rating: {review.rating}</p>
-            </div>
-          ))}
-        </div>
+        {stand.reviews.length === 0 ? (
+          <p>No reviews</p>
+        ) : (
+          <>
+            <p>Average Rating: {averageRating}</p>
+            {stand.reviews.map((review) => (
+              <div key={review.id} className={styles.review}>
+                <h3>{review.name}</h3>
+                <p>{review.comment}</p>
+                <p>Rating: {review.rating}</p>
+              </div>
+            ))}
+          </>
+        )}
       </div>
     </>
   );
@@ -65,6 +72,8 @@ export const getStaticProps = async ({ params }) => {
   const id = params?.id;
   const filePath = path.join(process.cwd(), "public", "data.json");
   const standData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+
+  console.log(standData);
 
   return {
     props: {
