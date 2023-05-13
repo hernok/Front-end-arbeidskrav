@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import UserContext from "../../context/UserContext";
 import styles from "./ReviewForm.module.scss";
 
-const ReviewForm = ({ id, reviews }) => {
+const ReviewForm = ({ id, reviews, refreshData }) => {
   const { user } = useContext(UserContext);
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
@@ -39,6 +39,7 @@ const ReviewForm = ({ id, reviews }) => {
           setRating(1);
           setHasReviewed(true);
           alert("Review submitted");
+          refreshData();
         } else {
           throw new Error("Error submitting review");
         }
@@ -56,7 +57,7 @@ const ReviewForm = ({ id, reviews }) => {
   if (user) {
     return (
       <form onSubmit={handleSubmit} className={styles.reviewForm}>
-        <h3>Leave a comment!</h3>
+        <h3>Leave a review!</h3>
         <label htmlFor="Name">Name:</label>
         <input
           id="Name"
@@ -88,7 +89,7 @@ const ReviewForm = ({ id, reviews }) => {
       </form>
     );
   } else {
-    return <p>Please login to leave a comment</p>;
+    return <p>Please login to leave a review</p>;
   }
 };
 

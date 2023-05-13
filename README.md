@@ -1,38 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Next.js App: The Local Hotdog Stand Explorer
 
-## Getting Started
+![Preview image of the project](public/assets/images/readmeimage.png)
 
-First, run the development server:
+## Description
+
+This Next.js application allows users to explore fictional hotdog stands in their local area. It features an admin panel for managing the stands, including creating, editing, and deleting stands. The app is built using Next.js, React, and Node.js.
+
+## Live Version
+
+The live version of this project can be found [here](https://front-end-arbeidskrav.vercel.app/). Please note, due to Vercel's limitations on backend support, the admin CRUD functionality does not work as it does in the local development environment.
+
+## User Types and Functionalities
+
+There are three types of users with different functionalities:
+
+1. **Normal Users:** They can view the page, see where the stands are on the map, and view the individual hotdog stand's page.
+2. **Premium Users (username: premium, password: premium123):** They have all the capabilities of normal users, plus they can submit a review for the stands. Each review must include a name, a comment, and a rating (1-5).
+3. **Admin Users (username: admin, password: admin123):** They have all the capabilities of premium users, plus they can edit and delete existing stands, and create new ones. When a stand is deleted, it is not removed from the database, but replaced with empty values. This will show empty entries in the edit page that only admins can see, but not on the page where normal and premium users can see. Admins can also upload an image from their local files for the new hotdog stand.
+
+## Session Handling
+
+This application uses cookies to manage user sessions. When a user logs in, a session cookie is created. This cookie is essential for providing personalized experiences and for protecting certain routes based on the user's role (normal, premium, or admin).
+
+It's important to note that these session cookies are set to expire after 10 minutes of inactivity. This means if a user does not interact with the application for 10 minutes, their session will end, and they will need to log in again. This feature is designed to improve the security of the application.
+
+Remember, if you are testing the application and find yourself being logged out, it may be because the session cookie has expired. Simply log in again to create a new session.
+
+## Installation and Usage
+
+Before you start, ensure you have Node.js and npm/yarn installed on your machine.
+
+Clone the repository:
+
+```bash
+git clone https://github.com/hernok/Front-end-arbeidskrav
+```
+
+Navigate to the project directory and install dependencies:
+
+```bash
+cd your-nextjs-app
+npm install
+```
+
+To run the application in development mode, use the following command:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application should now be running on [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+After logging in, users can explore hotdog stands, submit reviews (if they are premium or admin users), or manage stands (if they are admin users). When a user is done, they can hit the "Log Out" button in the burger menu.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Deployment
 
-## Learn More
+This project can be deployed using Vercel. For detailed instructions, refer to the [Vercel Documentation](https://vercel.com/docs). Note that due to limitations on Vercel, the admin CRUD functionality will not work as it does in the local development environment.
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For any inquiries, you can reach out to me at hernok@hotmail.com.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Credits
 
-## Deploy on Vercel
+This project was solely developed by me.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Dependencies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project uses the following dependencies:
 
-Mandatory Assignment⚠DUE DATE: Monday 17 February 2023Hand-in: Please hand in the complete source code for you projectThe focus of this assignment is appearance, performance, and user experience.You are tasked with building a solution that lets a user do the following:Normal (no login):Explore local hotdog shopsProvide a location and get a list of nearby hotdog storesPower users:Requires loginCreate, Edit and Delete hotdog listingsA hotdog listing should have the following:NameLocation (Address and/or map pin)A photoA rating from 1-5No need for user registration etc. just have one power user for demonstrationpurposes.
-Mandatory Assignment2You may make up data for your application, I know there are not that many hotdogstores in Sandefjord!Solution Requirements:Three core elements:appearanceperformanceuser experienceIt must use a map elementIt must look good on mobileIt does not have to be complexUse what you have learnt to create this single page solution.Bonus Challenge:Build and deploy the solution to the web. Provide a working link.
-# Front-end-arbeidskrav
+- eslint: 8.40.0
+- eslint-config-next: 13.4.1
+- js-cookie: 3.0.5
+- multer: 1.4.5-lts.1
+- next: 13.4.1
+- next-auth: 4.22.1
+- next-connect: 1.0.0
+- react: 18.2.0
+- react-burger-menu: 3.0.9
+- react-dom: 18.2.0
+- react-map-gl: 7.0.23
+- sass: 1.62.1
+- scss: 0.2.4
