@@ -59,7 +59,7 @@ This project can be deployed using Vercel. For detailed instructions, refer to t
 
 ## Contact
 
-For any inquiries, you can reach out to me at hernok@hotmail.com.
+If you wish to contact me, you can get hold of me here: hernok@hotmail.com.
 
 ## Credits
 
