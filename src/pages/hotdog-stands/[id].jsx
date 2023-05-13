@@ -4,9 +4,26 @@ import styles from "../styles/hotdog-stand.module.scss";
 import ReviewForm from "@/components/review/ReviewForm";
 import Image from "next/image";
 import Navbar from "@/components/navbar/Navbar";
+import { useState, useEffect } from "react";
 
 const HotdogStand = ({ stand }) => {
-  const averageRating = calculateAverageRating(stand.reviews);
+  const [standData, setStandData] = useState(stand);
+  const averageRating = calculateAverageRating(standData.reviews);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const response = await fetch(`/api/reviews?id=${stand.id}`);
+    if (!response.ok) {
+      console.error("Failed to fetch stand data:", response.statusText);
+      return;
+    }
+
+    const updatedStandData = await response.json();
+    setStandData(updatedStandData);
+  };
 
   function calculateAverageRating(reviews) {
     if (reviews.length === 0) {
@@ -31,16 +48,29 @@ const HotdogStand = ({ stand }) => {
             width={900}
             height={500}
           ></Image>
-          <div className={styles.reviewForm}>
-            <ReviewForm id={stand.id} reviews={stand.reviews} />
-          </div>
+          {standData.image ? (
+            <div className={styles.reviewForm}>
+              <ReviewForm
+                id={standData.id}
+                reviews={standData.reviews}
+                refreshData={fetchData}
+              />
+            </div>
+          ) : (
+            <div className={styles.reviewForm}>
+              <p>
+                This stand has been closed for reviews <br />
+                You have to wait until it is back up to leave a review
+              </p>
+            </div>
+          )}
         </div>
-        {stand.reviews.length === 0 ? (
-          <p>No reviews</p>
+        {standData.reviews.length === 0 ? (
+          <p>No reviews yet</p>
         ) : (
           <>
             <p>Average Rating: {averageRating}</p>
-            {stand.reviews.map((review) => (
+            {standData.reviews.map((review) => (
               <div key={review.id} className={styles.review}>
                 <h3>{review.name}</h3>
                 <p>{review.comment}</p>

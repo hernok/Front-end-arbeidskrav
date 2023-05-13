@@ -1,14 +1,11 @@
 [
   {
     "id": 0,
-    "stand_name": "Hot Dog Havensd",
+    "stand_name": "Hot Dog Havens",
     "description": "Good hotdogs",
     "image": "hotdog-stand-1.png",
     "alt": "image of hotdog-stand-1",
-    "coordinates": {
-      "lat": 59.13508943396942,
-      "lon": 10.212613152548519
-    },
+    "coordinates": { "lat": 59.13508943396942, "lon": 10.212613152548519 },
     "reviews": [
       {
         "id": 0,

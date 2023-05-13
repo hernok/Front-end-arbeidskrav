@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import UserContext from "../../context/UserContext";
 import styles from "./ReviewForm.module.scss";
 
-const ReviewForm = ({ id, reviews }) => {
+const ReviewForm = ({ id, reviews, refreshData }) => {
   const { user } = useContext(UserContext);
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
@@ -39,6 +39,7 @@ const ReviewForm = ({ id, reviews }) => {
           setRating(1);
           setHasReviewed(true);
           alert("Review submitted");
+          refreshData();
         } else {
           throw new Error("Error submitting review");
         }
