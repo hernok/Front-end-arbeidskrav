@@ -7,7 +7,10 @@ export function login(username, password) {
   );
 
   if (user) {
-    Cookies.set("user", JSON.stringify(user), { expires: 1, path: "/" });
+    Cookies.set("user", JSON.stringify(user), {
+      expires: 10 / 1440,
+      path: "/",
+    });
     return user;
   }
 

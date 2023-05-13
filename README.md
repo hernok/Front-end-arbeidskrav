@@ -18,6 +18,14 @@ There are three types of users with different functionalities:
 2. **Premium Users (username: premium, password: premium123):** They have all the capabilities of normal users, plus they can submit a review for the stands. Each review must include a name, a comment, and a rating (1-5).
 3. **Admin Users (username: admin, password: admin123):** They have all the capabilities of premium users, plus they can edit and delete existing stands, and create new ones. When a stand is deleted, it is not removed from the database, but replaced with empty values. This will show empty entries in the edit page that only admins can see, but not on the page where normal and premium users can see. Admins can also upload an image from their local files for the new hotdog stand.
 
+## Session Handling
+
+This application uses cookies to manage user sessions. When a user logs in, a session cookie is created. This cookie is essential for providing personalized experiences and for protecting certain routes based on the user's role (normal, premium, or admin).
+
+It's important to note that these session cookies are set to expire after 10 minutes of inactivity. This means if a user does not interact with the application for 10 minutes, their session will end, and they will need to log in again. This feature is designed to improve the security of the application.
+
+Remember, if you are testing the application and find yourself being logged out, it may be because the session cookie has expired. Simply log in again to create a new session.
+
 ## Installation and Usage
 
 Before you start, ensure you have Node.js and npm/yarn installed on your machine.
