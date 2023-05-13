@@ -1,5 +1,7 @@
 # My Next.js App: The Local Hotdog Stand Explorer
 
+![Preview image of the project](public/assets/images/readmeimage.png)
+
 ## Description
 
 This Next.js application allows users to explore fictional hotdog stands in their local area. It features an admin panel for managing the stands, including creating, editing, and deleting stands. The app is built using Next.js, React, and Node.js.

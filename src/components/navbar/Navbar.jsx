@@ -47,7 +47,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles["navbar-logo"]}>
         <Link href="/">
-          <span className={styles["navbar-link"]}>YourLogo</span>
+          <span className={styles["navbar-link"]}>🌭</span>
         </Link>
       </div>
       <div className={styles.hamburgerMenu}>
